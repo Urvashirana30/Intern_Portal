@@ -15,7 +15,7 @@
 ### Backend
 1. `cd backend`
 2. `npm install`
-3. `node server.js` — starts backend at http://localhost:3000
+3. `node server.js` 
 
 ### Frontend
 - Open `frontend/index.html` directly in your browser
