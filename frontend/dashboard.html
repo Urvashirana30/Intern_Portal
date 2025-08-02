@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container dashboard-box">
+    <h2 id="welcomeMessage">Welcome!</h2>
+    <p>Referral Code: <strong id="referralCode">...</strong></p>
+    <p>Total Donations Raised: ₹<strong id="totalAmount">...</strong></p>
+
+    <h3>Rewards</h3>
+    <ul>
+      <li>🥉 Bronze Tier – ₹500</li>
+      <li>🥈 Silver Tier – ₹1000</li>
+      <li>🥇 Gold Tier – ₹1500+</li>
+    </ul>
+
+    <a href="leaderboard.html">📊 View Leaderboard</a>
+  </div>
+
+  <script>
+    // Dashboard Load
+    document.addEventListener("DOMContentLoaded", function () {
+      const referral = localStorage.getItem("referralCode") || "N/A";
+      const amount = localStorage.getItem("totalRaised") || 0;
+
+      document.getElementById("referralCode").innerText = referral;
+      document.getElementById("totalAmount").innerText = amount;
+    });
+  </script>
+</body>
+</html>
